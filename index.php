@@ -26,20 +26,52 @@
         }
     </style>
     <header>
-        <div id="jumbo" class="card card-image jarallax"  style="background-image: url(img/banner-principal.jpg);">
+        <div id="jumbo" class="card card-image jarallax d-none d-xl-block d-none d-lg-block d-xl-none"  style="background-image: url(img/banner-principal.jpg);">
             <div id="jumbo_banner" class="text-white text-center py-5 px-4 container-fluid">
                 <div class="py-5 col-lg-6 offset-lg-6">
           
                 <!-- Content -->
                 <br><br><br><br>
                 <h2 class="card-title h2 my-4 py-2 text-dark"><strong>Publica tus vacantes y encuentra a las mejores candidatas</strong></h2>
-                <h5 class="mb-4 pb-2 px-md-5 mx-md-5 text-dark"> Te acompañamos en la búsqueda de talento y en el proceso de publicación de tu primer vacante </h5>
-                <a class="white-text btn btn-rounded btn-lg col-lg-6 #e91e63 pink">
+                <h5 class="mb-4 pb-2 px-md-3 mx-md-3 text-dark"> Te acompañamos en la búsqueda de talento y en el proceso de publicación de tu primer vacante </h5>
+                <a class="white-text btn  btn-lg col-lg-6" style="background-color: #ef446d;">
                     <strong>MÁS INFORMACIÓN</strong>
                 </a>
                 </div>
             </div>
         </div>
+        <div id="jumbo" class="card card-image jarallax d-none d-sm-block d-none d-md-block d-lg-none d-md-none "  style="background-image: url(img/banner-principal3.jpg);">
+            <div id="jumbo_banner" class="text-white text-center py-5 px-4 container-fluid">
+                <div class="py-5 col-lg-6 offset-lg-6">
+          
+                <!-- Content -->
+                <br><br><br><br><br><br><br>   
+               
+                <h2 class="card-title h2 my-4 py-2 text-dark"><strong>Publica tus vacantes y encuentra <br> a las mejores candidatas</strong></h2>
+                <h5 class="mb-4 pb-2 px-md-5 mx-md-5 text-dark"> Te acompañamos en la búsqueda de talento y <br> en el proceso de publicación de tu primer vacante </h5>
+                <a class="white-text btn  btn-lg " style="background-color: #ef446d;">
+                    <strong>MÁS INFORMACIÓN</strong>
+                </a>
+                </div>
+            </div>
+        </div>
+        <div id="jumbo" class="card card-image jarallax d-block d-sm-none"  style="background-image: url(img/banner-principal4.png);">
+            <div id="jumbo_banner" class="text-white text-center py-5 px-4 container-fluid">
+                <div class="py-5 col-lg-6 offset-lg-6">
+          
+                <!-- Content -->
+                <br><br><br><br><br>
+                
+                <h2 class="card-title h2 my-4 py-2 text-dark "><strong id="eslogan">Publica tus vacantes y encuentra a las mejores candidatas</strong></h2>
+                <h5 class="mb-4 pb-2 px-md-5 mx-md-5 text-dark"> Te acompañamos en la búsqueda de talento y en el proceso de publicación de tu primer vacante </h5>
+                <a class="white-text btn  btn-lg col-lg-6" style="background-color: #ef446d;">
+                    <strong>MÁS INFORMACIÓN</strong>
+                </a>
+                </div>
+            </div>
+        </div>
+
+        
     </header>
     <main>
         <div class="container-fluid">
@@ -63,14 +95,14 @@
                     </strong>
                 </h5>
                 <center>
-                    <a href="" class="white-text btn btn-lg col-lg-6 #e91e63 pink">ME INTERESA</a>
+                    <a href="" class="white-text btn btn-lg col-lg-6" style="background-color: #ef446d;">ME INTERESA</a>
                 </center>
                 <br>
                 <br>
                 <br>
                 <br>
                 </div>
-                <div class="col-lg-6  #fce4ec pink lighten-5 p-5 ">
+                <div class="col-lg-6  p-5 d-none d-xl-block d-none d-lg-block d-xl-none" style="background-color: #fde7eb;">
                     <br>
                     <br>
                     <div class="row">
@@ -102,6 +134,93 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-6 p-5  d-block d-sm-none" style="background-color: #fde7eb;">
+                    <br>
+                    <br>
+                    <div class="row">
+                        
+                        <div class="col-12">
+                            <div class="col-12 mb-4">
+                                <center>
+                                    <h5 class="font-weight-bold">
+                                        <img src="img/icono1.png" alt="" class="mb-4"> 
+                                        <p>Crea una cuenta  </p> 
+                                    </h5>
+                                </center>
+                                
+                            </div>
+                            
+                            <div class="col-12 mb-4">
+                                <center>
+                                    <h5 class="font-weight-bold">
+                                        <img src="img/icono2.png" alt="" class="mb-4"> 
+                                        <p>Escoge una modalidad </p>
+                                    </h5>
+                                </center>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <center>
+                                    <h5 class="font-weight-bold">
+                                        <img src="img/icono3.png" alt="" class="mb-4"> 
+                                        <p>Realiza el pago online</p>
+                                    </h5>
+                                </center>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <center>
+                                    <h5 class="font-weight-bold">
+                                        <img src="img/icono4.png" alt="" class="mb-4"> 
+                                        <p>Confirma ¡y listo!</p>
+                                    </h5>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 p-5 d-none d-sm-block d-md-none d-none d-md-block d-lg-none" style="background-color: #fde7eb;">
+                    <br>
+                    <br>
+                    <div class="row">
+                        
+                        
+                            <div class="col-sm-3 col-md-6 mb-4">
+                                <center>
+                                    <h5 class="font-weight-bold">
+                                        <img src="img/icono1.png" alt="" class="mb-4"> 
+                                        <p>Crea una cuenta  </p> 
+                                    </h5>
+                                </center>
+                                
+                            </div>
+                            
+                            <div class="col-sm-3 col-md-6 mb-4">
+                                <center>
+                                    <h5 class="font-weight-bold">
+                                        <img src="img/icono2.png" alt="" class="mb-4"> 
+                                        <p>Escoge una modalidad </p>
+                                    </h5>
+                                </center>
+                            </div>
+                            <div class="col-sm-3 col-md-6 mb-4">
+                                <center>
+                                    <h5 class="font-weight-bold">
+                                        <img src="img/icono3.png" alt="" class="mb-4"> 
+                                        <p>Realiza el pago online</p>
+                                    </h5>
+                                </center>
+                            </div>
+                            <div class="col-sm-3 col-md-6  mb-4">
+                                <center>
+                                    <h5 class="font-weight-bold">
+                                        <img src="img/icono4.png" alt="" class="mb-4"> 
+                                        <p>Confirma ¡y listo!</p>
+                                    </h5>
+                                </center>
+                            </div>
+                        
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container-fluid #f5f5f5 grey lighten-4">
@@ -119,7 +238,7 @@
                     <div class="carousel-inner v-2" role="listbox">
                   
                     <div class="carousel-item active">
-                        <div class="col-lg-2 col-md-4 col-sm-4 ">
+                        <div class="col-lg-2 col-md-4 col-sm-12 ">
                             <img src="img/aeromexico-gris.png" alt="">
                         </div>
                     </div>
@@ -182,7 +301,7 @@
             <br>
         
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3 mb-5">
                     <!--Panel-->
                     <div class="card text-center"">
                         <div class=" card-header #424242 grey darken-3 white-text">
@@ -190,7 +309,7 @@
                          <h1> BÁSICA</h1>
                          <h6>mensual</h6>
                         </div>
-                        <div class="card-body #fce4ec pink lighten-5">
+                        <div class="card-body " style="background-color: #fde7eb;">
                             <br>
                             <h2 id="eslogan">$2,350*</h2>
                             <h6>pesos + IVA</h6>
@@ -206,7 +325,8 @@
                     </div>
                     <!--/.Panel-->
                 </div>
-                <div class="col-lg-3">
+                
+                <div class="col-lg-3 mb-5">
                     <!--Panel-->
                     <div class="card text-center"">
                         <div class=" card-header #424242 grey darken-3 white-text">
@@ -214,7 +334,7 @@
                          <h1> PLUS</h1>
                          <h6>3 meses</h6>
                         </div>
-                        <div class="card-body #fce4ec pink lighten-5">
+                        <div class="card-body" style="background-color: #fde7eb;">
                             <br>
                             <h2 id="eslogan">$5,955*</h2>
                             <h6>pesos + IVA</h6>
@@ -238,7 +358,8 @@
                     </div>
                     <!--/.Panel-->
                 </div>
-                <div class="col-lg-3">
+               
+                <div class="col-lg-3 mb-5">
                     <!--Panel-->
                     <div class="card text-center"">
                         <div class=" card-header #424242 grey darken-3 white-text">
@@ -246,7 +367,7 @@
                          <h1> ÓPTIMA</h1>
                          <h6>6 meses</h6>
                         </div>
-                        <div class="card-body #fce4ec pink lighten-5">
+                        <div class="card-body" style="background-color: #fde7eb;">
                             <br>
                             <h2 id="eslogan">$11,410*</h2>
                             <h6>pesos + IVA</h6>
@@ -270,7 +391,7 @@
                     </div>
                     <!--/.Panel-->
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 mb-5">
                     <!--Panel-->
                     <div class="card text-center"">
                         <div class=" card-header #424242 grey darken-3 white-text">
@@ -278,7 +399,7 @@
                          <h1> SUPERIOR</h1>
                          <h6>ANUAL</h6>
                         </div>
-                        <div class="card-body #fce4ec pink lighten-5">
+                        <div class="card-body" style="background-color: #fde7eb;">
                             <br>
                             <h2 id="eslogan">$22,320*</h2>
                             <h6>pesos + IVA</h6>
@@ -304,10 +425,9 @@
                 </div>
             </div>
             <br>
-            <br>
-            <br>
+        
             <center>
-                <a class="white-text btn  btn-lg col-lg-6 #e91e63 pink">
+                <a class="white-text btn  btn-lg col-lg-6" style="background-color: #ef446d;">
                     <strong>MÁS INFORMACIÓN</strong>
                 </a>
             </center>
@@ -317,7 +437,7 @@
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6 #ec407a pink lighten-1 text-white">
+                <div class="col-lg-6 text-white" style="background-color: #ef446d;">
                     <br><br>
                     <h2 class="mb-3 font-weight-bold"> 
                         <center> 
@@ -388,11 +508,11 @@
                         </div>
                         <br>        
                         <!-- Sign in button -->
-                        <div class="col-lg-12">
-                            
-                            <button type="submit" class=" white-text btn btn-rounded btn-lg col-lg-6 #e91e63 pink">Enviar</button>
+                        <div class="col-lg-12"> 
+                            <button type="submit" class=" white-text btn  btn-lg col-lg-6" style="background-color: #ef446d;">Enviar</button>
+                            <br><br>
                         </div>
-                
+                        
                     </form>
                     <!-- Default form subscription -->
                 </div>
