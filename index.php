@@ -8,6 +8,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/formValidation.min.css">
     <link rel="stylesheet" href="css/app.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
@@ -61,8 +62,10 @@
           
                 <!-- Content -->
                 <br><br><br><br><br>
-                
-                <h2 class="card-title h2 my-4 py-2 text-dark "><strong id="eslogan">Publica tus vacantes y encuentra a las mejores candidatas</strong></h2>
+                <br><br><br><br><br>
+                <br>
+        
+                <h2 class="card-title h2  text-dark "><strong >Publica tus vacantes y encuentra a las mejores candidatas</strong></h2>
                 <h5 class="mb-4 pb-2 px-md-5 mx-md-5 text-dark"> Te acompañamos en la búsqueda de talento y en el proceso de publicación de tu primer vacante </h5>
                 <a class="white-text btn  btn-lg col-lg-6" style="background-color: #ef446d;">
                     <strong>MÁS INFORMACIÓN</strong>
@@ -393,6 +396,19 @@
                 </div>
                 <div class="col-lg-3 mb-5">
                     <!--Panel-->
+                    
+                    <img src="img/mes-gratis.png" alt="" id="logo">
+
+                    <style>
+                        #logo{
+                            position: absolute;
+                            width: 70px;
+                            height: 70px;
+                            z-index: 4;
+                            right: 5px;
+                            top: -20px;
+                        }
+                    </style>
                     <div class="card text-center"">
                         <div class=" card-header #424242 grey darken-3 white-text">
                          <br>
@@ -470,28 +486,28 @@
                     </h2>
                     <center>Déjanos tus datos y nos pondremos en contacto contigo</center>
                     <br>
-                    <form class="text-center row needs-validation ml-4 mr-4" novalidate action="correos.php" method="POST" id="headhunter">
+                    <form class="text-center row needs-validation ml-4 mr-4" novalidate action="correos.php" method="POST" id="bolsatrabajobr">
                     
                         <div class="col-lg-6">
-                            <div class="mb-4">
+                            <div class="mb-4 form-group">
                                 <input type="text" name="name" id="name"  class="form-control " placeholder="Nombre completo">
                             </div> 
-                            <div class="mb-4">
+                            <div class="mb-4 form-group">
                                 <input type="email" name="email" id="email" class="form-control" placeholder="E-mail">
                             </div>
-                            <div class="mb-4">
+                            <div class="mb-4 form-group">
                                 <input type="number" name="phone" id="phone" class="form-control" placeholder="Teléfono">
                             </div>
                         </div>
     
                         <div class="col-lg-6">
-                            <div class="mb-4">
+                            <div class="mb-4 form-group">
                                 <input type="text" name="company" id="company"  class="form-control " placeholder="Empresa">
                             </div> 
-                            <div class="mb-4">
+                            <div class="mb-4 form-group">
                                 <input type="text" name="position" id="position" class="form-control" placeholder="Puesto que desea cubrir">
                             </div> 
-                            <div class="mb-4"> 
+                            <div class="mb-4 form-group"> 
                                 <input type="text" name="state" id="state" class="form-control" placeholder="Estado">
                             </div> 
     
@@ -520,37 +536,7 @@
         </div>
     </main>
     <!-- Footer -->
-    <footer class="page-footer font-small special-color-dark pt-4">
-    <br><br>
-    <!-- Footer Elements -->
-    <div class="container">
-
-    <ul class="list-unstyled list-inline text-center">
-        <li class="list-inline-item">
-            <a class="btn-floating btn-dribbble mx-1" href="https://bolsarosa.com/">
-                <i class="fas fa-globe"></i>
-            </a>
-        </li>
-        <li class="list-inline-item">
-            <a class="btn-floating btn-fb mx-1">
-            <i class="fab fa-facebook-f"> </i>
-            </a>
-        </li>
-        <li class="list-inline-item">
-            <a class="btn-floating btn-tw mx-1">
-            <i class="fab fa-twitter"> </i>
-            </a>
-        </li>
-        <li class="list-inline-item">
-            <a class="btn-floating btn-li mx-1">
-                <i class="fab fa-linkedin-in"> </i>
-            </a>
-        </li> 
-        </ul>
-      
-    </div>
-    <!-- Footer Elements -->
-    <br><br>
+    <footer class="page-footer font-small special-color-dark ">
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© Copyright:
         <a href="https://app.bolsarosa.com/aviso-privacidad"> Bolsa Rosa. Todos los derechos reservados. Aviso de privacidad</a>
@@ -565,100 +551,85 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Bootstrap validate-->
-    <script src="js/jquery.validate.min.js"></script>
+    <!-- Bootstrap validate-->
+    <script type="text/javascript" src="js/FormValidation.full.min.js"></script>
+    <script src="js/plugins/Bootstrap.min.js"></script>
 
     <script>
-        $.validator.addMethod( "lettersonly", function( value, element ) {
-	        return this.optional( element ) || /^[a-z]+$/i.test( value );
-        }, "No se permiten números en este campo" );
-
-        $( document ).ready(function() {
-            $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
-                var next = $(this).next();
-            if (!next.length) {
-                next = $(this).siblings(':first');
-            }
-            next.children(':first-child').clone().appendTo($(this));
-
-            for (var i=0;i<4;i++) {
-            next=next.next();
-            if (!next.length) {
-                next=$(this).siblings(':first');
-            }
-            next.children(':first-child').clone().appendTo($(this));
-            }
-            });
-
-            $( "#headhunter" ).validate( {
-				rules: {
-					name: "required",
-					username: {
-						required: true,
-						minlength: 2
-					},
-					
-					email: {
-						required: true,
-						email: true
-					},
-                    agree: {
-                        required: true
+        document.addEventListener('DOMContentLoaded', function(e) {
+        FormValidation.formValidation(
+            document.getElementById('bolsatrabajobr'),
+            {
+                fields: {
+                    name: {
+                        validators: {
+                            notEmpty: {
+                                message: 'El nombre es requerido'
+                            },
+                        }
                     },
+                    email: {
+                        validators: {
+                            notEmpty: {
+                                message: 'El email es requerido'
+                            },
+                            emailAddress: {
+                            message: 'Introduzca una direción de email valida'
+                            },   
+                        }
+                    },
+
                     phone: {
-                        required: true
+                        validators: {
+                            notEmpty: {
+                                message: 'El número telefonico es requerido'
+                            },
+                            
+                        }
                     },
                     company: {
-                        required: true
+                        validators: {
+                            notEmpty: {
+                                message: 'El nombre de la empresa es requerido'
+                            },
+                            
+                        }
                     },
                     position: {
-                        required: true
+                        validators: {
+                            notEmpty: {
+                                message: 'El nombre de la puesto es requerido'
+                            },
+                            
+                        }
                     },
                     state: {
-                        required: true,
-                        lettersonly: true
-                    }
-
-				},
-				messages: {
-					name: "Por favor, introduzca su <br> nombre completo",
-					
-                    phone: {
-                        required: "Porfavor, introduzca un numero de teléfono",
+                        validators: {
+                            notEmpty: {
+                                message: 'El nombre es requerido'
+                            },
+                            regexp: {
+                                regexp: /^[a-zA-Z0-9_]+$/,
+                                message: 'El nombre solo puede constar de carácteres alfabéticos, '
+                            }
+                        }
                     },
-                    company: {
-                        required: "Porfavor, introduzca el nombre de tu empresa",
-                    },
-                    position: {
-                        required: "Porfavor, introduzca el nombre de la posición que desea cubrir"
-                    },
-                    state: {
-                        required: "Porfavor, introduzca el estado de procedencia",
-                        
-                    },
-					email: "Porfavor, introduzca un cuenta de email valida",
-					agree: {
-                        required: "Aún no ha aceptado las politicas de la empresa"
-                    }
-				},
-				errorElement: "em",
-				errorPlacement: function ( error, element ) {
-					// Add the `help-block` class to the error element
-					error.addClass( "help-block" );
-
-					if ( element.prop( "type" ) === "checkbox" ) {
-						error.insertAfter( element.parent( "label" ) );
-					} else {
-						error.insertAfter( element );
-					}
-				},
-				highlight: function ( element, errorClass, validClass ) {
-					$( element ).parents( ".col-sm-5" ).addClass( "invalid-feedback" ).removeClass( "valid-feedback" );
-				},
-				unhighlight: function (element, errorClass, validClass) {
-					$( element ).parents( ".col-sm-5" ).addClass( "valid-feedback" ).removeClass( "invalid-feedback" );
-                } 
-			} );
-        });
+                   
+                },
+                plugins: {
+                    trigger: new FormValidation.plugins.Trigger(),
+                    bootstrap: new FormValidation.plugins.Bootstrap(),
+                    submitButton: new FormValidation.plugins.SubmitButton(),
+                    icon: new FormValidation.plugins.Icon({
+                        valid: 'fa fa-check',
+                        invalid: 'fa fa-times',
+                        validating: 'fa fa-refresh'
+                    }),
+                    defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
+                },
+            }
+        );
+    });
     </script>
 </body>
 </html>
