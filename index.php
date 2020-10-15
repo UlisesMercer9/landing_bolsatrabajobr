@@ -607,10 +607,6 @@
                         validators: {
                             notEmpty: {
                                 message: 'El nombre es requerido'
-                            },
-                            regexp: {
-                                regexp: /^[a-zA-Z0-9_]+$/,
-                                message: 'El nombre solo puede constar de carácteres alfabéticos, '
                             }
                         }
                     },
