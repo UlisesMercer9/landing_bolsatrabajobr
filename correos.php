@@ -1,5 +1,5 @@
 <?php   
-    $destinatario = 'ulisesmercer9@gmail.com';
+    $destinatario = 'leadshhv@bolsarosa.com';
 
     $name = $_POST['name'];
     $email = $_POST['email'];
@@ -8,13 +8,13 @@
     $position = $_POST['position'];
     $state = $_POST['state'];
 
-    $asunto = 'Información enviada desde HeadHunter';
+    $asunto = 'Lead landing BT';
 
-    $header = "Enviado desde la página de Landing page HeadHunter";
+    $header = "Lead landing BT";
     $contenido = "Email: " . $email ."\nTelefono: " . $phone . "\nCompañia: " . $company . "\nPosición: " . $position . "\nEstado: " . $state . "\nAtentamente: " . $name;
 
     mail($destinatario, $asunto, $contenido, $header);
-    echo "<script>alert('correo enviado existosamente')</script>";
+    echo "<script>alert('Solicitud de contacto enviada exitosamente, nos pondremos en contacto contigo muy pronto ya puedes cerrar esta página.')</script>";
     echo "<script>setTimeout(\"location.href='index.php'\",1000)</script>";
 
 ?>
