@@ -226,7 +226,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid #f5f5f5 grey lighten-4">
+        <div class=" #f5f5f5 grey lighten-4">
             <br><br><br>
             <center>
                 <h2>
@@ -241,7 +241,7 @@
                     <div class="carousel-inner v-2" role="listbox">
                   
                     <div class="carousel-item active">
-                        <div class="col-lg-2 col-md-4 col-sm-12 ">
+                        <div class="col-lg-2 col-md-4 col-sm-4 ">
                             <img src="img/aeromexico-gris.png" alt="">
                         </div>
                     </div>
@@ -486,30 +486,34 @@
                     </h2>
                     <center>Déjanos tus datos y nos pondremos en contacto contigo</center>
                     <br>
-                    <form class="text-center row needs-validation ml-4 mr-4" novalidate action="correos.php" method="POST" id="bolsatrabajobr">
+                    <form class="text-center row  ml-4 mr-4"  action="" method="POST" id="bolsatrabajobr" required>
                     
                         <div class="col-lg-6">
                             <div class="mb-4 form-group">
-                                <input type="text" name="name" id="name"  class="form-control " placeholder="Nombre completo">
+                                <input type="text" name="nombre" id="nombre"  class="form-control " placeholder="Nombre completo" required>
                             </div> 
                             <div class="mb-4 form-group">
-                                <input type="email" name="email" id="email" class="form-control" placeholder="E-mail">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="E-mail" required>
                             </div>
                             <div class="mb-4 form-group">
-                                <input type="number" name="phone" id="phone" class="form-control" placeholder="Teléfono">
+                                <input type="number" name="telefono" id="telefono" class="form-control" placeholder="Teléfono" required>
                             </div>
                         </div>
     
                         <div class="col-lg-6">
                             <div class="mb-4 form-group">
-                                <input type="text" name="company" id="company"  class="form-control " placeholder="Empresa">
+                                <input type="text" name="compañia" id="compañia"  class="form-control " placeholder="Empresa"required>
                             </div> 
                             <div class="mb-4 form-group">
-                                <input type="text" name="position" id="position" class="form-control" placeholder="Puesto que desea cubrir">
+                                <input type="text" name="posicion" id="posicion" class="form-control" placeholder="Puesto que desea cubrir" required>
                             </div> 
                             <div class="mb-4 form-group"> 
-                                <input type="text" name="state" id="state" class="form-control" placeholder="Estado">
+                                <input type="text" name="estado" id="estado" class="form-control" placeholder="Estado" required>
                             </div> 
+
+                            <?php $fcha = date("d-m-Y");?>
+
+                            <input type="hidden" class="form-control" name="fecha" value="<?php echo $fcha;?>" >
     
                             
                         </div>
@@ -550,86 +554,23 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
-    <!-- Bootstrap validate-->
-    <!-- Bootstrap validate-->
-    <script type="text/javascript" src="js/FormValidation.full.min.js"></script>
-    <script src="js/plugins/Bootstrap.min.js"></script>
-
+    
     <script>
-        document.addEventListener('DOMContentLoaded', function(e) {
-        FormValidation.formValidation(
-            document.getElementById('bolsatrabajobr'),
-            {
-                fields: {
-                    name: {
-                        validators: {
-                            notEmpty: {
-                                message: 'El nombre es requerido'
-                            },
-                        }
-                    },
-                    email: {
-                        validators: {
-                            notEmpty: {
-                                message: 'El email es requerido'
-                            },
-                            emailAddress: {
-                            message: 'Introduzca una direción de email valida'
-                            },   
-                        }
-                    },
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzZCcfbkmcQHk4x6Y5xA2IGNWhLvZmo7Ypca5Xm3MEmm08B5IaK/exec'
+    const form = document.forms['bolsatrabajobr']
 
-                    phone: {
-                        validators: {
-                            notEmpty: {
-                                message: 'El número telefonico es requerido'
-                            },
-                            
-                        }
-                    },
-                    company: {
-                        validators: {
-                            notEmpty: {
-                                message: 'El nombre de la empresa es requerido'
-                            },
-                            
-                        }
-                    },
-                    position: {
-                        validators: {
-                            notEmpty: {
-                                message: 'El nombre de la puesto es requerido'
-                            },
-                            
-                        }
-                    },
-                    state: {
-                        validators: {
-                            notEmpty: {
-                                message: 'El nombre es requerido'
-                            }
-                        }
-                    },
-                   
-                },
-                plugins: {
-                    trigger: new FormValidation.plugins.Trigger(),
-                    bootstrap: new FormValidation.plugins.Bootstrap(),
-                    submitButton: new FormValidation.plugins.SubmitButton(),
-                    icon: new FormValidation.plugins.Icon({
-                        valid: 'fa fa-check',
-                        invalid: 'fa fa-times',
-                        validating: 'fa fa-refresh'
-                    }),
-                    defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
-                },
-            }
-        );
-    });
+    form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => window.location.reload(false))
+        .then(response => window.alert("Solicitud de contacto enviada exitosamente, nos pondremos en contacto contigo muy pronto ya puedes cerrar esta página."))
+        .catch(error => console.error('Error!', error.message))
+    })
     </script>
+    
     <!-- Event snippet for BT_Lead_Octubre conversion page
      In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-     <script>
+    <script>
     function gtag_report_conversion(url) {
         var callback = function () {
             if (typeof(url) != 'undefined') {
@@ -642,6 +583,25 @@
         });
         return false;
         }
+    </script>
+    <script>
+        $( document ).ready(function() {
+            $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
+                var next = $(this).next();
+                    if (!next.length) {
+                     next = $(this).siblings(':first');
+                    }
+                    next.children(':first-child').clone().appendTo($(this));
+
+                for (var i=0;i<4;i++) {
+                    next=next.next();
+                if (!next.length) {
+                    next=$(this).siblings(':first');
+                    }
+                next.children(':first-child').clone().appendTo($(this));
+                }
+            });
+        });
     </script>
 </body>
 </html>
